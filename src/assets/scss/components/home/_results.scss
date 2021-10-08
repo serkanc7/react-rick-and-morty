@@ -1,0 +1,31 @@
+.results{
+    background-color: $results-bg-color;
+    border-radius: 10px;
+    width: calc(100% - 325px);
+    margin-left: 25px;
+    padding: 15px;
+    @include mq(tablet,max){
+        margin-top: 25px;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    &__container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 15px;
+
+        @include mq(desktop,max){
+            grid-template-columns: repeat(3,1fr);
+        }
+
+        @include mq(tablet-xl,max){
+            grid-template-columns: repeat(2,1fr);
+        }
+
+        @include mq(mobile,max){
+            grid-template-columns: 1fr;
+        }
+    }
+}

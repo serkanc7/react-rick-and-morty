@@ -1,0 +1,43 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: $header-bg-color;
+
+    &__logo{
+        text-decoration: none;
+        text-shadow: 2px 2px 2px $header-logo-shadow-color;
+        color: $header-logo-color;
+        font-weight: bold;
+        font-size: 22px;
+        margin-right: 20px; 
+
+        @include mq(mobile,max){
+            font-size: 18px;
+        }
+    }
+
+    &__link{
+        text-decoration: none;
+        color: $header-link-color;
+        font-weight: 500;
+        &:not(:last-child){
+            margin-right: 15px;
+        }
+
+        &:hover{
+            color: lightblue;
+        }
+
+        @include mq(mobile,max){
+            font-size: 14px;
+            &:not(:last-child){
+                margin-right: 5px;
+            }
+        }
+
+    }
+
+}

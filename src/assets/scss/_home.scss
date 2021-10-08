@@ -1,0 +1,12 @@
+@import './components/home/form';
+@import './components/home/results';
+@import './components/home/card';
+
+.home{
+    display: flex;
+    
+    @include mq(tablet,max){
+        flex-direction: column;
+    } 
+}
+
